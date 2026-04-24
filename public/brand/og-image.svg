@@ -1,0 +1,33 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#050816"/>
+  <circle cx="232" cy="118" r="180" fill="#0E335F" fill-opacity="0.55"/>
+  <circle cx="1008" cy="508" r="220" fill="#102B78" fill-opacity="0.5"/>
+  <circle cx="822" cy="116" r="150" fill="#0B4754" fill-opacity="0.5"/>
+  <rect x="86" y="74" width="1028" height="482" rx="42" fill="url(#card)" stroke="#FFFFFF" stroke-opacity="0.12"/>
+  <rect x="142" y="150" width="112" height="112" rx="32" fill="#07111E" stroke="#FFFFFF" stroke-opacity="0.16"/>
+  <path d="M176 232V181H220.5" stroke="url(#stroke)" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M178 229L220.5 181" stroke="url(#stroke)" stroke-width="7" stroke-linecap="round"/>
+  <path d="M192 182H220V210" stroke="url(#fill)" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="286" y="220" fill="#F8FBFF" font-family="Inter, Arial, sans-serif" font-size="68" font-weight="700" letter-spacing="0.22em">FRONEX</text>
+  <text x="144" y="320" fill="#9CC7E8" font-family="Inter, Arial, sans-serif" font-size="24" letter-spacing="0.28em">DIGITAL FRONTIER</text>
+  <text x="144" y="400" fill="#F8FBFF" font-family="Inter, Arial, sans-serif" font-size="52" font-weight="600">
+    Servicos digitais premium para negocios
+  </text>
+  <text x="144" y="458" fill="#A9C5DF" font-family="Inter, Arial, sans-serif" font-size="28">
+    Sites, software, apps, seguranca e hospedagem com acabamento de nivel internacional.
+  </text>
+  <defs>
+    <linearGradient id="fill" x1="150" y1="142" x2="232" y2="240" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#76E4FF"/>
+      <stop offset="1" stop-color="#2D6BFF"/>
+    </linearGradient>
+    <linearGradient id="stroke" x1="160" y1="136" x2="224" y2="235" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9EEBFF"/>
+      <stop offset="1" stop-color="#3A78FF"/>
+    </linearGradient>
+    <linearGradient id="card" x1="86" y1="74" x2="1114" y2="556" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0.05"/>
+    </linearGradient>
+  </defs>
+</svg>

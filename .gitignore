@@ -1,0 +1,16 @@
+node_modules
+node_modules_incomplete
+.git
+.git-alt
+.next
+.npm-cache
+.codex-deps
+.codex-deps-clean
+.env.local
+.env.*.local
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.DS_Store
+Thumbs.db
