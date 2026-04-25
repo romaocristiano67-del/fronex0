@@ -3,6 +3,9 @@ import { redirect } from 'next/navigation'
 import { PostServiceForm } from '@/components/dashboard/PostServiceForm'
 import Link from 'next/link'
 
+// Evita prerender estatico — esta pagina requer autenticacao em runtime
+export const dynamic = 'force-dynamic'
+
 export const metadata = {
   title: 'Painel de Controlo',
 };

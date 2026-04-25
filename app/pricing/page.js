@@ -2,6 +2,8 @@ import React from 'react';
 import Link from 'next/link';
 import { PLANS, DAILY_RATE_KZ } from '@/config/pricing';
 
+export const dynamic = 'force-dynamic';
+
 export const metadata = {
   title: 'Planos e Precos',
   description: `Escolhe o plano ideal para o teu negocio. A partir de ${DAILY_RATE_KZ} Kz por dia no marketplace Fronex.`,
