@@ -59,7 +59,7 @@ export const Services = () => {
               <Reveal key={service.slug} delay={index * 70}>
                 <Card variant="gradient" hover className="service-card h-full p-5 md:p-6">
                   <CardHeader>
-                    <ServiceVisual icon={service.icon} accent={service.accent} label={service.motionLabel} />
+                    <ServiceVisual icon={service.icon} image={service.image} accent={service.accent} label={service.motionLabel} />
                   </CardHeader>
 
                   <CardContent className="flex h-full flex-col">

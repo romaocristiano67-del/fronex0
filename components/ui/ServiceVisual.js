@@ -45,19 +45,28 @@ const icons = {
   ),
 };
 
-export const ServiceVisual = ({ icon, accent, label }) => {
+import Image from 'next/image';
+
+export const ServiceVisual = ({ icon, image, accent, label }) => {
   return (
     <div
       className="service-visual relative h-56 overflow-hidden rounded-[1.75rem] border border-white/10 bg-white/[0.05]"
       style={{ '--service-accent': accent }}
     >
-      <div className="service-grid absolute inset-0 opacity-60" />
-      <div className="service-orb service-orb-one absolute -left-10 top-4 h-32 w-32 rounded-full blur-3xl" />
-      <div className="service-orb service-orb-two absolute bottom-4 right-4 h-28 w-28 rounded-full blur-3xl" />
-      <div className="service-scan absolute inset-x-0 top-1/2 h-px -translate-y-1/2" />
-      <div className="service-wave absolute inset-x-6 bottom-6 h-14 rounded-full blur-2xl" />
+      <div className="service-grid absolute inset-0 opacity-60 z-10" />
+      <div className="service-orb service-orb-one absolute -left-10 top-4 h-32 w-32 rounded-full blur-3xl z-10" />
+      <div className="service-orb service-orb-two absolute bottom-4 right-4 h-28 w-28 rounded-full blur-3xl z-10" />
+      <div className="service-scan absolute inset-x-0 top-1/2 h-px -translate-y-1/2 z-10" />
+      <div className="service-wave absolute inset-x-6 bottom-6 h-14 rounded-full blur-2xl z-10" />
 
-      <div className="relative flex h-full flex-col justify-between p-6">
+      {image && (
+        <div className="absolute inset-0 z-0">
+          <Image src={image} alt={label} fill className="object-cover opacity-40 mix-blend-overlay transition-transform duration-700 hover:scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
+        </div>
+      )}
+
+      <div className="relative z-20 flex h-full flex-col justify-between p-6">
         <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/[0.12] bg-slate-950/[0.50] px-3 py-1 text-[0.65rem] uppercase tracking-[0.24em] text-white/[0.58]">
           <span className="h-2 w-2 rounded-full bg-[var(--service-accent)] shadow-[0_0_18px_var(--service-accent)]" />
           {label}
