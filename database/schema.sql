@@ -220,11 +220,25 @@ VALUES
   ('Outros', 'outros', 'Diversos', 'box')
 ON CONFLICT (slug) DO NOTHING;
 
+-- ==========================================================================
+-- REGRA DE NEGOCIO: Taxa base de subscricao = 700 Kz/dia
+--
+-- Todos os planos pagos sao calculados multiplicando a taxa diaria pela
+-- duracao em dias. O plano anual aplica um desconto de fidelidade (~26%).
+--
+-- Para alterar precos futuramente, ajusta os valores abaixo E o ficheiro
+-- config/pricing.js no frontend.
+--
+-- Calculo base:
+--   Semanal = 700 × 7   =  4.900 Kz
+--   Mensal  = 700 × 30  = 21.000 Kz
+--   Anual   = 700 × 365 = 255.500 Kz (com desconto: 189.000 Kz)
+-- ==========================================================================
 INSERT INTO public.subscription_plans (name, slug, price, duration_days, features, max_listings)
 VALUES
-  ('Free', 'free', 0, 365, '{"featured": false, "priority_support": false, "analytics": false}', 3),
+  ('Gratuito', 'free', 0, 365, '{"featured": false, "priority_support": false, "analytics": false}', 3),
   ('Semanal', 'semanal', 4900, 7, '{"featured": true, "priority_support": false, "analytics": true}', 10),
-  ('Mensal', 'mensal', 18900, 30, '{"featured": true, "priority_support": true, "analytics": true}', 50),
+  ('Mensal', 'mensal', 21000, 30, '{"featured": true, "priority_support": true, "analytics": true}', 50),
   ('Anual', 'anual', 189000, 365, '{"featured": true, "priority_support": true, "analytics": true, "custom_domain": true}', 999)
 ON CONFLICT (slug) DO NOTHING;
 
